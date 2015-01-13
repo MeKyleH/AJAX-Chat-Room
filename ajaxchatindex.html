@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AJAX Chat Project</title>
+	<link href="ajaxchat.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="ajaxchat.js" ></script>
+</head>
+<body onload="init();">
+	<table id="content">
+		<tr>
+			<td> 
+				<div id="chatWindow"> </div>
+			</td>
+			<td id="colorpicker">
+				<img src="palette.png" id="palette" onclick="getColor(event);"/>
+				<br/>
+				<input id="color" type="hidden" readonly="true" value="#000000" />
+				<span id="sampleText">
+				(TEXT COLOR)
+				</span>
+			</td>
+		</tr>
+	</table>
+	
+	<div>
+		<input type="text" id="userName" maxlength="10" size="12" onblur="checkUsername();"/>
+		<input type="text" id="messageBox" maxlength="2000" size="50" onkeydown="handleKey(event)"/>
+		<input type="button" value="Send" onclick="sendMessage();" />
+		<input type="button" value="Delete All" onclick="deleteMessages();" />
+	</div>
+		<input type="button" value="Dark Background" onclick="darkChat();" />
+		<input type="button" value="Regular Background" onclick="regularChat();" />
+	<div>
+	</div>
+</body>
+</html>
