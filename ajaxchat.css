@@ -1,0 +1,54 @@
+body {
+	font-family: Tahoma, Helvetica, sans-serif;
+	margin: 1px;
+	font-size: 12px;
+	text-align: left;
+}
+
+#content {
+	border: DarkGreen 1px solid;
+	margin-bottom: 10px;
+}
+
+input {
+	border: #999 1px solid;
+	font-size: 10px;
+}
+
+#chatWindow {
+	position: relative;
+	width: 340px;
+	height: 270px;
+	overflow: auto;
+}
+
+.darkChat {
+	position: relative;
+	width: 340px;
+	height: 270px;
+	overflow: auto;
+	background-color: #000000;
+	color: black;
+}
+
+.regularChat {
+	position: relative;
+	width: 340px;
+	height: 270px;
+	overflow: auto;
+	background-color: #FFFFFF;
+	color: white;
+}
+
+.item {
+	margin-bottom: 6px;
+}
+
+#colorpicker {
+	text-align:center;
+}
+
+span {
+	font-weight: bold;
+	font-size: 14px;
+}
