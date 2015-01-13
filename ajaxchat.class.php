@@ -42,10 +42,10 @@ class Chat {
 
 		// only gathers new chats if the user has already been in the chat room
 		if ($id > 0) {
-			$query = 'SELECT message_id, user_name, message, color, ' . ' DATE_FORMAT(posted_on, "%Y-%m-%d %H:%i:%s") ' . ' AS posted_on ' . ' FROM chat WHERE message_id > ' . $id . ' ORDER BY message_id ASC';
+			$query = 'SELECT message_id, user_name, message, color, ' . ' DATE_FORMAT(posted_on, "%H:%i") ' . ' AS posted_on ' . ' FROM chat WHERE message_id > ' . $id . ' ORDER BY message_id ASC';
 		} else {
 			// gets the last 25 chats if a user is new to the chat room
-			$query = ' SELECT message_id, user_name, message, color, posted_on FROM ' . ' (SELECT message_id, user_name, message, color, ' . ' DATE_FORMAT(posted_on, "%Y-%m-%d %H:%i:%s") AS posted_on ' . ' FROM chat ' . ' ORDER BY message_id DESC ' . ' LIMIT 25) AS Last25' . ' ORDER BY message_id ASC';
+			$query = ' SELECT message_id, user_name, message, color, posted_on FROM ' . ' (SELECT message_id, user_name, message, color, ' . ' DATE_FORMAT(posted_on, "%H:%i") AS posted_on ' . ' FROM chat ' . ' ORDER BY message_id DESC ' . ' LIMIT 25) AS Last25' . ' ORDER BY message_id ASC';
 		}
 
 		// sends request to the database
